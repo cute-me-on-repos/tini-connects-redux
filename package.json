@@ -1,0 +1,61 @@
+{
+  "name": "tini-connects-redux",
+  "version": "1.0.1",
+  "description": "Redux binding utils for tiniapp",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib/**/*”"],
+  "engines": {
+    "node": ">=12",
+    "yarn": ">=1.22.10"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development tsc --watch",
+    "build": "cross-env NODE_ENV=production tsc && yarn lint",
+    "lint": "prettier --write \"{src,types,example/!(lib)}/**/*\"",
+    "prepublishOnly" : "yarn test || yarn lint",
+    "preversion" : "yarn lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cute-me-on-repos/tini-connects-redux.git"
+  },
+  "keywords": [
+    "redux",
+    "tini-connects-redux",
+    "tini-app",
+    "tiki"
+  ],
+  "author": "Thien Ly <thien.ly@tiki.vn>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cute-me-on-repos/tini-connects-redux/issues"
+  },
+  "homepage": "https://github.com/cute-me-on-repos/tini-connects-redux#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src,types,example/!(lib)}/**/*": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.7",
+    "prettier": "^2.0.5",
+    "@types/lodash": "^4.14.170"
+
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "redux": "^4.0.5",
+    "typescript": "^3.9.3"
+  }
+}
