@@ -1,4 +1,4 @@
-import { getKeys, getType } from '../utils';
+import { getKeys, getType } from './utils';
 const TYPE_OBJECT = '[object Object]';
 const TYPE_ARRAY = '[object Array]';
 function diffObject(currData, prevData, result, rootPath) {

@@ -1,10 +1,9 @@
 {
   "name": "tini-connects-redux",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "Redux binding utils for tiniapp",
-  "main": "lib",
-  "types": "lib/**/*.d.ts",
-  "files": ["lib/**/*”"],
+  "main": "src/index.ts",
+  "types": "types/*",
   "engines": {
     "node": ">=10",
     "yarn": ">=1"

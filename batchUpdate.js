@@ -1,8 +1,8 @@
 import cloneDeep from 'lodash/cloneDeep';
 import set from 'lodash/set';
-import { getProvider } from '../provider';
-import { getKeys } from '../utils';
 import diff from './diff';
+import { getProvider } from './provider';
+import { getKeys } from './utils';
 const queue = [];
 export function batchUpdate({ id, data, setData }, updater) {
     const queueItem = queue.find((q) => q.id === id);

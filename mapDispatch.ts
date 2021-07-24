@@ -1,12 +1,12 @@
-import { useDispatch } from '../extend/hooks'
+import { useDispatch } from './hooks'
 import {
   IAnyArray,
   IAnyObject,
   MapDispatch,
   MapDispatchFunction,
-  MapDispatchObject,
-} from '../types'
-import { getKeys, isFunction, isPlainObject, warn } from '../utils'
+  MapDispatchObject
+} from './types'
+import { getKeys, isFunction, isPlainObject, warn } from './utils'
 
 function handleMapDispatchObject(mapDispatch: MapDispatchObject, target: IAnyObject): void {
   const dispatch = useDispatch()

@@ -1,5 +1,5 @@
-import { IAnyArray, IAnyObject } from '../types'
-import { getKeys, getType } from '../utils'
+import { IAnyArray, IAnyObject } from './types'
+import { getKeys, getType } from './utils'
 
 const TYPE_OBJECT = '[object Object]'
 const TYPE_ARRAY = '[object Array]'

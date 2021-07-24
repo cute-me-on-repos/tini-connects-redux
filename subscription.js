@@ -1,6 +1,6 @@
-import { useSubscribe } from './hooks';
 import { batchUpdate } from './batchUpdate';
-import { isPlainObject, getKeys } from '../utils';
+import { useSubscribe } from './hooks';
+import { getKeys, isPlainObject } from './utils';
 export default function subscription(context, mapState) {
     return useSubscribe((currState, prevState) => {
         const ownStateChanges = {};

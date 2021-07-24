@@ -1,5 +1,5 @@
-import { useDispatch } from '../extend/hooks';
-import { getKeys, isFunction, isPlainObject, warn } from '../utils';
+import { useDispatch } from './hooks';
+import { getKeys, isFunction, isPlainObject, warn } from './utils';
 function handleMapDispatchObject(mapDispatch, target) {
     const dispatch = useDispatch();
     const keys = getKeys(mapDispatch);

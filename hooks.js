@@ -1,4 +1,4 @@
-import { getProvider } from '../provider';
+import { getProvider } from './provider';
 export const useStore = () => getProvider().store;
 export const useState = () => getProvider().store.getState();
 export const useDispatch = () => getProvider().store.dispatch;

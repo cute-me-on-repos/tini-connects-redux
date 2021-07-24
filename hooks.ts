@@ -1,6 +1,6 @@
 import { AnyAction, Dispatch, Store, Unsubscribe } from 'redux'
-import { getProvider } from '../provider'
-import { IAnyObject, Ref, Selector, SubscribeHandler } from '../types'
+import { getProvider } from './provider'
+import { IAnyObject, Ref, Selector, SubscribeHandler } from './types'
 
 export const useStore = (): Store<IAnyObject, AnyAction> => getProvider().store
 

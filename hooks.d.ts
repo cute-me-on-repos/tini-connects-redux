@@ -1,5 +1,5 @@
 import { AnyAction, Dispatch, Store, Unsubscribe } from 'redux';
-import { IAnyObject, Ref, Selector, SubscribeHandler } from '../types';
+import { IAnyObject, Ref, Selector, SubscribeHandler } from './types';
 export declare const useStore: () => Store<IAnyObject, AnyAction>;
 export declare const useState: () => IAnyObject;
 export declare const useDispatch: () => Dispatch<AnyAction>;

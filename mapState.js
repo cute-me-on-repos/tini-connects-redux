@@ -1,5 +1,5 @@
-import { useState } from '../extend/hooks';
-import { hasOwnProperty, isPlainObject } from '../utils';
+import { useState } from './hooks';
+import { hasOwnProperty, isPlainObject } from './utils';
 export default function handleMapState(mapState) {
     const state = useState();
     const ownState = {};

@@ -1,5 +1,5 @@
 {
-  "include": ["./src/**/*"],
+"include": ["*"],
   "compilerOptions": {
     "allowJs": false,
     "alwaysStrict": true,
@@ -20,6 +20,5 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "target": "ES2015",
-    "outDir": "lib"
   }
 }
