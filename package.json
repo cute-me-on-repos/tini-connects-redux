@@ -1,6 +1,6 @@
 {
   "name": "tini-connects-redux",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "description": "Redux binding utils for tiniapp",
   "main": "src/index.ts",
   "types": "types/*",
