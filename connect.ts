@@ -92,16 +92,30 @@ export default function connect({
   }
 }
 
-export function $page(
-  config: ConnectOption = {},
-): (options: PageComponentOption) => void | PageComponentOption {
-  config.type = 'page'
-  return connect(config)
-}
-
-export function $component(
-  config: ConnectOption = {},
-): (options: PageComponentOption) => void | PageComponentOption {
-  config.type = 'component'
-  return connect(config)
+export class Connector {
+  constructor(
+    public type: Pick<ConnectOption, 'type'> = 'page' as Pick<ConnectOption, 'type'>,
+    public mapState: Pick<ConnectOption, 'mapState'> = [] as Pick<ConnectOption, 'mapState'>,
+    public mapDispatch: Pick<ConnectOption, 'mapDispatch'> = {} as Pick<
+      ConnectOption,
+      'mapDispatch'
+    >,
+    public manual: Pick<ConnectOption, 'manual'> = true as Pick<ConnectOption, 'manual'>,
+  ) {}
+  setType(type: Pick<ConnectOption, 'type'>): Connector {
+    this.type = type
+    return this
+  }
+  setMapState(mapState: Pick<ConnectOption, 'mapState'>): Connector {
+    this.mapState = mapState
+    return this
+  }
+  setMapDispatch(mapDispatch: Pick<ConnectOption, 'mapDispatch'>): Connector {
+    this.mapDispatch = mapDispatch
+    return this
+  }
+  setManual(manual: Pick<ConnectOption, 'manual'>): Connector {
+    this.manual = manual
+    return this
+  }
 }

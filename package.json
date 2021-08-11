@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Redux binding utils for tiniapp",
   "main": "src/index.ts",
-  "types": "types/*",
+  "types": "src/*.d.ts",
   "engines": {
     "node": ">=10",
     "yarn": ">=1"
@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development tsc --watch",
     "build": "cross-env NODE_ENV=production tsc && yarn lint",
-    "lint": "prettier --write \"{src,types,example/!(lib)}/**/*\"",
+    "lint": "prettier --write \"{*.ts,*.js}\"",
     "prepublishOnly": "yarn test || yarn lint",
     "preversion": "yarn lint",
     "version": "npm run format && git add -A src",

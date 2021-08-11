@@ -1,5 +1,5 @@
 {
-"include": ["*"],
+  "include": ["*"],
   "compilerOptions": {
     "allowJs": false,
     "alwaysStrict": true,
@@ -19,6 +19,6 @@
     "strict": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "target": "ES2015",
+    "target": "ES2015"
   }
 }

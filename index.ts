@@ -1,16 +1,5 @@
-import connect, { $component, $page } from './connect'
+import connect from './connect'
 import { useDispatch, useRef, useSelector, useState, useStore, useSubscribe } from './hooks'
 import { setProvider } from './provider'
 
-export {
-  setProvider,
-  connect,
-  $page,
-  $component,
-  useStore,
-  useState,
-  useDispatch,
-  useSubscribe,
-  useRef,
-  useSelector,
-}
+export { setProvider, connect, useStore, useState, useDispatch, useSubscribe, useRef, useSelector }

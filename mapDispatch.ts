@@ -1,11 +1,5 @@
 import { useDispatch } from './hooks'
-import {
-  IAnyArray,
-  IAnyObject,
-  MapDispatch,
-  MapDispatchFunction,
-  MapDispatchObject
-} from './types'
+import { IAnyArray, IAnyObject, MapDispatch, MapDispatchFunction, MapDispatchObject } from './types'
 import { getKeys, isFunction, isPlainObject, warn } from './utils'
 
 function handleMapDispatchObject(mapDispatch: MapDispatchObject, target: IAnyObject): void {
