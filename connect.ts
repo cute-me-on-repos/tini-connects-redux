@@ -1,4 +1,3 @@
-import set from 'lodash/set'
 import { Unsubscribe } from 'redux'
 import diff from './diff'
 import handleMapDispatch from './mapDispatch'
@@ -6,7 +5,7 @@ import handleMapState from './mapState'
 import { getProvider } from './provider'
 import subscription from './subscription'
 import { ConnectOption, IAnyArray, IAnyObject, PageComponentOption } from './types'
-import { getKeys, warn } from './utils'
+import { getKeys, setProperty as set, warn } from './utils'
 
 declare const Page: (options: PageComponentOption) => void
 declare const Component: (options: PageComponentOption) => void

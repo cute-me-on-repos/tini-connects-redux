@@ -1,9 +1,7 @@
-import cloneDeep from 'lodash/cloneDeep'
-import set from 'lodash/set'
 import diff from './diff'
 import { getProvider } from './provider'
 import { Context, IAnyObject, QueueItem } from './types'
-import { getKeys } from './utils'
+import { getKeys, setProperty as set } from './utils'
 
 const queue: QueueItem[] = []
 
@@ -36,7 +34,7 @@ function update(): void {
       Object.keys(diffData).forEach((key) => {
         if (queueItem !== undefined) set(queueItem.updater, key, diffData[key])
       })
-      queueItem.setData(cloneDeep(queueItem.updater))
+      queueItem.setData({ ...queueItem.updater })
     }
   }
 }

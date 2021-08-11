@@ -1,10 +1,9 @@
-import set from 'lodash/set';
 import diff from './diff';
 import handleMapDispatch from './mapDispatch';
 import handleMapState from './mapState';
 import { getProvider } from './provider';
 import subscription from './subscription';
-import { getKeys, warn } from './utils';
+import { getKeys, setProperty as set, warn } from './utils';
 const INSTANCE_ID = Symbol('INSTANCE_ID');
 export default function connect({ type = 'page', mapState, mapDispatch, manual = false, } = {}) {
     if (type !== 'page' && type !== 'component') {
